@@ -1,0 +1,29 @@
+﻿@page
+@model ProjetoFinal.Pages.Admin.CadastroDicasModel
+@{
+    <h1> Cadastro de Dicas de Prevenção </h1>
+    <form method="post">
+        <div>
+            
+            <label> Ambiente </label>
+            <input name="ambiente" />
+            <br /><br />
+            <label> Checklist (um item por linha) </label>
+            <textarea name="checklist"></textarea>
+            <br /><br />
+            <label> Animais </label>
+            <select name="animal">
+                @foreach (var c in Model.Animais)
+                {
+                    <option value="@c.AnimalId">@c.Nome</option>
+                }
+            </select>
+            <br /><br />
+        </div>
+
+        <div>
+            <button type="submit"> Cadastrar </button>
+        </div>
+
+    </form>
+}

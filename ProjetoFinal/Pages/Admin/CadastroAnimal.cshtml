@@ -1,0 +1,40 @@
+﻿@page
+@model ProjetoFinal.Pages.Admin.CadastroAnimalModel
+@{
+	<h1> Cadastro de Animais </h1>
+    <form method="post">  
+        <div> 
+            <label> Nome Popular</label>
+            <input name="nome"/>
+            <br /><br />
+            <label> Sintomas </label>
+            <input name="sintomas"/>
+            <br /><br />
+            <label> Primeiros Socorros </label>
+            <input name="primeirossocorros"/>
+            <br /><br />
+            <label> O que não fazer </label>
+            <input name="naofazer"/>
+            <br /><br />
+            <label> Região de Maior Ocorrência </label>
+            <input name="regiaoocorrencia" />
+            <br /><br />
+            <label> Periculosidade </label>
+            <input name="periculosidade" />
+            <br /><br />
+            <label> Categoria </label>
+            <select name="categoria">
+                @foreach (var c in Model.Categorias)
+                {
+                    <option value="@c.CategoriaId">@c.Grupo</option>
+                }
+            </select>
+            <br /><br />
+        </div>
+
+        <div>
+        <button type="submit"> Cadastrar </button>
+        </div>
+
+    </form>
+}

@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Catálogo de Animais Peçonhentos e Venenosos</h1>
+    <p>Escolha uma opção:</p>
+
+    <p>
+        <a class="btn btn-primary" asp-page="/Admin/CadastroAnimal">1. Cadastro de Animais</a>
+    </p>
+    <p>
+        <a class="btn btn-success" asp-page="/Admin/CadastroDicas">2. Cadastro de Dicas de Prevenção</a>
+    </p>
+</div>
